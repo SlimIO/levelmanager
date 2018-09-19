@@ -1,0 +1,6 @@
+{
+    "extends": "@slimio/eslint-config",
+    "env": {
+        "browser": true
+    }
+}

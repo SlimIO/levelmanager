@@ -1,0 +1,26 @@
+{
+  "name": "levelmanager",
+  "version": "1.0.0",
+  "description": "LevelDB (Database) - GUI Manager build with electron",
+  "main": "main.js",
+  "scripts": {
+      "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlimIO/levelmanager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SlimIO/levelmanager/issues"
+  },
+  "homepage": "https://github.com/SlimIO/levelmanager#readme",
+  "devDependencies": {
+    "@slimio/eslint-config": "^1.1.7",
+    "electron": "^3.0.0",
+    "eslint": "^5.6.0"
+  }
+}
