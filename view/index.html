@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="../public/master.css">
-    <script src="../public/master.js"></script>
+    <script src="../public/master.js" defer></script>
     <title>LevelDB GUI Manager</title>
 </head>
 <body>
@@ -16,15 +16,25 @@
                 <li id="btn_del_db" class="disabled">Delete DB</li>
             </ul>
             <section class="db_list">
-                <section class="db">
-
-                </section>
-                <section class="db">
-
-                </section>
+                <level-db></level-db>
+                <level-db></level-db>
             </section>
         </aside>
         <main></main>
     </section>
+
+    <script type="text/javascript">
+        const componentLoader = require("../public/scripts/componentLoader.js");
+        async function DOMLoaded() {
+            const loader = new componentLoader("public/components");
+            await loader.initialize();
+            await Promise.all([
+                loader.loadComponent("level-db")
+            ]);
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            DOMLoaded().catch(console.error);
+        });
+    </script>
 </body>
 </html>

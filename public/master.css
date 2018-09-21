@@ -69,10 +69,6 @@ aside {
     aside > section.db_list {
         flex-grow: 1;
     }
-        aside > section.db_list > section.db {
-            height: 80px;
-            border-bottom: 3px solid #263238;
-        }
 
 main {
     flex-grow: 1;

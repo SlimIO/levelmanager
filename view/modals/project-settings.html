@@ -1,0 +1,16 @@
+<h1>Hello world!</h1>
+
+<script>
+    const modal = require("electron-modal");
+
+    modal.getData().then((data) => {
+        console.log(data);
+
+        // Apply the data you passed to the modal
+        document.querySelector('h1').innerHTML = data.title;
+
+        // And once we're ready, let's show it!
+        modal.show();
+
+    });
+</script>

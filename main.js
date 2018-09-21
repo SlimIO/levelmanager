@@ -3,12 +3,17 @@ const { join } = require("path");
 
 // Require Third-party Dependencies
 const { app, BrowserWindow } = require("electron");
+const modal = require("electron-modal");
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
 
 function createWindow() {
+
+    // Setup modal
+    modal.setup();
+
     // Create the browser window.
     win = new BrowserWindow({ width: 1200, height: 700 });
 

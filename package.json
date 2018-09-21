@@ -4,7 +4,7 @@
   "description": "LevelDB (Database) - GUI Manager build with electron",
   "main": "main.js",
   "scripts": {
-      "start": "electron .",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +22,9 @@
     "@slimio/eslint-config": "^1.1.7",
     "electron": "^3.0.0",
     "eslint": "^5.6.0"
+  },
+  "dependencies": {
+    "electron-modal": "^1.0.0",
+    "uuid": "^3.3.2"
   }
 }
