@@ -1,0 +1,6 @@
+
+.icon-plus-circled:before { content: '\e800'; } /* '' */
+.icon-cog:before { content: '\e801'; } /* '' */
+.icon-trash:before { content: '\e802'; } /* '' */
+.icon-github:before { content: '\f113'; } /* '' */
+.icon-gamepad:before { content: '\f11b'; } /* '' */

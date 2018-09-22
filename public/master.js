@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function domReady() {
     console.log("DOM Loaded!");
 
     const btnAddDB = document.getElementById("btn_add_db");
-    // const btn_del_db = document.getElementById("btn_add_db");
 
     btnAddDB.addEventListener("click", async function btnAddCliked(event) {
         event.preventDefault();

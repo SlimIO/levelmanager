@@ -5,6 +5,8 @@ const { join } = require("path");
 const { app, BrowserWindow } = require("electron");
 const modal = require("electron-modal");
 
+process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = true;
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win;

@@ -5,22 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="../public/master.css">
+    <link rel="stylesheet" href="../public/css/fontello.css">
     <script src="../public/master.js" defer></script>
     <title>LevelDB GUI Manager</title>
 </head>
 <body>
     <section class="app_container">
         <aside>
-            <ul class="menu">
-                <li id="btn_add_db">Add DB</li>
-                <li id="btn_del_db" class="disabled">Delete DB</li>
-            </ul>
+            <section class="menu" id="btn_add_db">
+                <i class="icon-plus-circled"></i>
+                <p>Add DB</p>
+            </section>
             <section class="db_list">
                 <level-db></level-db>
                 <level-db></level-db>
             </section>
         </aside>
-        <main></main>
+        <main>
+            <section class="nodb">
+                <p>Please select a database in the left menu (or add a new one)</p>
+            </section>
+        </main>
     </section>
 
     <script type="text/javascript">
