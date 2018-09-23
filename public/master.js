@@ -1,20 +1,26 @@
 // Require Node.JS Dependencies
 const { join } = require("path");
 
-// Require Third-Party Dependencies
-const modal = require("electron-modal");
+// CONSTANTS
+const DATA_DIR = join(__dirname, "..", "data");
 
 document.addEventListener("DOMContentLoaded", function domReady() {
-    console.log("DOM Loaded!");
-
     const btnAddDB = document.getElementById("btn_add_db");
 
     btnAddDB.addEventListener("click", async function btnAddCliked(event) {
         event.preventDefault();
-        console.log(__dirname);
-        const modalEmitter = await modal.open(join(__dirname, "modals", "project-settings.html"), {
-            width: 400,
-            height: 300
-        });
+        const projectSettingPath = join(__dirname, "modals", "project-settings.html");
+        const BWP = window.open(projectSettingPath, "project-settings");
     });
+
+    const dbList = require(join(DATA_DIR, "db.json"));
+    const fragment = document.createDocumentFragment();
+    for (const [id, db] of Object.entries(dbList)) {
+        const dbElement = document.createElement("level-db");
+        dbElement.id = id;
+        dbElement.setAttribute("name", db.name);
+        dbElement.setAttribute("path", db.path);
+        fragment.appendChild(dbElement);
+    }
+    document.getElementById("dbs").appendChild(fragment);
 });

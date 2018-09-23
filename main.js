@@ -3,7 +3,6 @@ const { join } = require("path");
 
 // Require Third-party Dependencies
 const { app, BrowserWindow } = require("electron");
-const modal = require("electron-modal");
 
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = true;
 
@@ -12,9 +11,6 @@ process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = true;
 let win;
 
 function createWindow() {
-
-    // Setup modal
-    modal.setup();
 
     // Create the browser window.
     win = new BrowserWindow({ width: 1200, height: 700 });
